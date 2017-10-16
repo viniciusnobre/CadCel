@@ -32,7 +32,7 @@ function ($scope) {
   var endereco = document.getElementById('inputcadastroendereco').value;
   var senha = document.getElementById('inputcadastrosenha').value;
   var csenha = document.getElementById('inputcadastrocsenha').value;
-  var Usuario [] = {nome, email, cpf, birth, celular, endereco, senha, csenha};
+  var Usuario = {nome, email, cpf, birth, celular, endereco, senha, csenha};
   console.log(Usuario);
   }
 });
@@ -49,29 +49,7 @@ function ($scope, $stateParams) {
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams) {
-    $scope.teste = function(){
-      var celular1 = document.getElementById('inputcadastrocelular1').value;
-      var tablet = document.getElementById('inputcadastrotablet').value;
-      var bicileta = document.getElementById('inputcadastrobike').value;
-      var applewatch = document.getElementById('inputcadastrowatch').value;
-      var outro = document.getElementById('inputcadastrooutro').value;
-      var samsung = document.getElementById('inputcadastrosamsung').value;
-      var apple = document.getElementById('inputcadastroapple').value;
-      var asus = document.getElementById('inputcadastroasus').value;
-      var lg = document.getElementById('inputcadastrolg').value;
-      var motorola = document.getElementById('inputcadastromotorola').value;
-      var outroaparelho = document.getElementById('inputcadastrooutroaparelho').value;
-      var modelo = document.getElementById('inputcadastromodelo').value;
-      var status = document.getElementById('inputcadastrostatus').value;
-      var roubado = document.getElementById('inputcadastroroubado').value;
-      var seguro = document.getElementById('inputcadastroseguro').value;
-      var vendido = document.getElementById('inputcadastrovendido').value;
-      var outrostatus = document.getElementById('inputcadastrooutrostatus').value;
-      var imei = document.getElementById('inputcadastroimei').value;
-      var descrição = document.getElementById('inputcadastrodescricao').value;
-      var nf = document.getElementById('inputcadastronf').value;
-      var quadro = document.getElementById('inputcadastroquadro').value;
-    
+
 }])
 
 .controller('recuperarSenhaCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
@@ -101,8 +79,22 @@ function ($scope, $stateParams) {
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams) {
+    $scope.teste = function(){
+      var tipo = document.getElementById('inputcadastrotipo').value;
 
+      var marca = document.getElementById('inputcadastromarca').value;
 
+      var modelo = document.getElementById('inputcadastromodelo').value;
+
+      var status = document.getElementById('inputcadastrostatus').value;
+
+      var imei = document.getElementById('inputcadastroimei').value;
+      var descricao = document.getElementById('inputcadastrodescricao').value;
+      var nf = document.getElementById('inputcadastronf').value;
+      var quadro = document.getElementById('inputcadastroquadro').value;
+      var Dados = {tipo,marca,status,imei,descricao,nf,quadro};
+      console.log(Dados);
+    }
 }])
 
 .controller('consultaDeAparelhosAgenteCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller

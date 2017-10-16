@@ -6,34 +6,34 @@
     <form id="cadastroDeAparelhos-form7" class="list">
       <label class="item item-select" id="cadastroDeAparelhos-select2">
         <span class="input-label">Tipo de Aparelho</span>
-        <select>
+        <select  id="inputcadastrotipo">
           <option>Celular</option>
-          <input type="text" ng-model=myvar placeholder="" id="inputcadastrocelular1">
+          <!--<input type="text" placeholder="">-->
           <option>Tablet</option>
-          <input type="text" ng-model=myvar placeholder="" id="inputcadastrotablet">
+          <!--<input type="text" placeholder="">-->
           <option>Bicicleta</option>
-          <input type="text" ng-model=myvar placeholder="" id="inputcadastrobicicleta">
+          <!--<input type="text" placeholder="">-->
           <option>Apple Watch</option>
-          <input type="text" ng-model=myvar placeholder="" id="inputcadastrowatch">
+          <!--<input type="text" placeholder="">-->
           <option>Outro</option>
-          <input type="text" ng-model=myvar placeholder="" id="inputcadastrooutro">
+          <!--<input type="text" placeholder="">-->
         </select>
       </label>
       <label class="item item-select" id="cadastroDeAparelhos-select3">
         <span class="input-label">Marca</span>
-        <select>
+        <select id="inputcadastromarca">
           <option>Samsung</option>
-          <input type="text" ng-model=myvar placeholder="" id="inputcadastrosamsung">
+          <!--<input type="text" ng-model=myvar placeholder="" id="inputcadastrosamsung"> -->
           <option>Apple</option>
-          <input type="text" ng-model=myvar placeholder="" id="inputcadastroapple">
+          <!--<input type="text" ng-model=myvar placeholder="" id="inputcadastroapple">-->
           <option>Asus</option>
-          <input type="text" ng-model=myvar placeholder="" id="inputcadastroasus">
+          <!--<input type="text" ng-model=myvar placeholder="" id="inputcadastroasus">-->
           <option>LG</option>
-          <input type="text" ng-model=myvar placeholder="" id="inputcadastrolg">
+          <!--<input type="text" ng-model=myvar placeholder="" id="inputcadastrolg">-->
           <option>Motorola</option>
-          <input type="text" ng-model=myvar placeholder="" id="inputcadastromotorola">
+          <!--<input type="text" ng-model=myvar placeholder="" id="inputcadastromotorola">-->
           <option>Outro</option>
-          <input type="text" ng-model=myvar placeholder="" id="inputcadastrooutroaparelho">
+          <!--<input type="text" ng-model=myvar placeholder="" id="inputcadastrooutroaparelho">-->
         </select>
       </label>
       <label class="item item-input" id="cadastroDeAparelhos-input24">
@@ -42,16 +42,11 @@
       </label>
       <label class="item item-select" id="cadastroDeAparelhos-select4">
         <span class="input-label">Status do Aparelho</span>
-        <input type="text" ng-model=myvar placeholder="" id="inputcadastrostatus">
-        <select>
+        <select id="inputcadastrostatus">
           <option>Furtado/Roubado</option>
-          <input type="text" ng-model=myvar placeholder="" id="inputcadastroroubado">
           <option>Seguro</option>
-          <input type="text" ng-model=myvar placeholder="" id="inputcadastroseguro">
           <option>Vendido</option>
-          <input type="text" ng-model=myvar placeholder="" id="inputcadastrovendido">
           <option>Outro</option>
-          <input type="text" ng-model=myvar placeholder="" id="inputcadastrooutrostatus">
         </select>
       </label>
       <label class="item item-input" id="cadastroDeAparelhos-input23">
@@ -59,17 +54,19 @@
         <input type="text" ng-model=myvar placeholder="" id='inputcadastroimei'>
       </label>
       <label class="item item-input" id="cadastroDeAparelhos-textarea1">
-        <span class="input-label">Descrição</span><textarea placeholder=""></textarea></label>
+        <span class="input-label">Descrição</span><!--<textarea placeholder=""></textarea>-->
         <input type="text" ng-model=myvar placeholder="" id='inputcadastrodescricao'>
+      </label>
       <label class="item item-input" id="cadastroDeAparelhos-textarea2">
-        <span class="input-label">NF</span><textarea placeholder=""></textarea></label>
+        <span class="input-label">NF</span><!--<textarea placeholder=""></textarea>-->
         <input type="text" ng-model=myvar placeholder="" id='inputcadastronf'>
+      </label>
       <ion-toggle toggle-class="toggle-balanced" id="cadastroDeAparelhos-toggle3">Furtado</ion-toggle>
       <label class="item item-input" id="cadastroDeAparelhos-input25">
         <span class="input-label">Número do Quadro</span>
         <input type="number" ng-model=myvar placeholder="" id='inputcadastroquadro'>
       </label>
     </form>
-    <a ui-sref="usuarioLogado()" id="cadastroDeAparelhos-button29" class="button button-balanced button-block">Cadastrar</a>
+    <a ui-sref="usuarioLogado()" id="cadastroDeAparelhos-button29" class="button button-balanced button-block" ng-click=teste()>Cadastrar</a>
   </ion-content>
 </ion-view>
