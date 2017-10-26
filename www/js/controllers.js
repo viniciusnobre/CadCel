@@ -75,19 +75,15 @@ function ($scope, $stateParams) {
 
 }])
 
-.controller('cadastroDeAparelhosCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('cadastroDeAparelhosCtrl', ['$scope', '$stateParams', '$http', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
+function ($scope, $stateParams, $http) {
     $scope.teste = function(){
       var tipo = document.getElementById('inputcadastrotipo').value;
-
       var marca = document.getElementById('inputcadastromarca').value;
-
       var modelo = document.getElementById('inputcadastromodelo').value;
-
       var status = document.getElementById('inputcadastrostatus').value;
-
       var imei = document.getElementById('inputcadastroimei').value;
       var descricao = document.getElementById('inputcadastrodescricao').value;
       var nf = document.getElementById('inputcadastronf').value;
