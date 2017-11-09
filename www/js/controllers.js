@@ -35,13 +35,38 @@ function ($scope) {
   var Usuario = {nome, email, cpf, birth, celular, endereco, senha, csenha};
   console.log(Usuario);
   }
+
+  jQuery(function ($scope)){
+    $("#inputcadastrocpf").mask("999.999.999-99");
+    $("#inputcadastrocelular").mask("(99) 99999-9999");
+  }
+
+
 });
 
 app.controller('cadastroAgenteCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
+function ($scope) {
 
+  $scope.teste = function(){
+    var anome = document.getElementById('inputagentecadastronome').value;
+    var aemail = document.getElementById('inputagentecadastroemail').value;
+    var acpf = document.getElementById('inputagentecadastrocpf').value;
+    var abirth = document.getElementById('inputagentecadastrobirth').value;
+    var acelular = document.getElementById('inputagentecadastrocelular').value;
+    var aendereco = document.getElementById('inputagentecadastroendereco').value;
+    var asenha = document.getElementById('inputagentecadastrosenha').value;
+    var acsenha = document.getElementById('inputagentecadastrocsenha').value;
+    var amatricula = document.getElementById('inputagentecadastromatricula').value;
+    var Agente = {anome, aemail, acpf, abirth, acelular, aendereco, asenha, acsenha, amatricula}
+    console.log(Agente);
+  }
+
+  jQuery(function ($scope)){
+    $("#inputagentecadastrocpf").mask("999.999.999-99");
+    $("#inputagentecadastrocelular").mask("(99) 99999-9999");
+  }
 
 }])
 
@@ -49,6 +74,21 @@ function ($scope, $stateParams) {
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams) {
+
+  $scope.consultarImei = function(){
+    var identificador = document.getElementById('inputconsultaimei');
+  }
+
+  function ($scope, $stateParams, $http, $state) {
+    $scope.dados = [];
+    $scope.matricula = localStorage.getItem("inputconsultaimei");
+    var identificador = JSON.stringify({type:'text',imei:$scope.consultarImei});
+      $http.post("Extrato.php",parameter).success(function(dados,status,headers,config)
+      {
+          $scope.consultarImei = imei;
+          $state.go("consultaDeAparelhosUsuRio");
+      });
+  }
 
 }])
 
